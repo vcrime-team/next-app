@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import TooltipV2 from 'unify-react-desktop/build/TooltipV2'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -51,6 +52,10 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+        </div>
+        <div style={{ marginBottom: '16px' }}>
+          <span id="using-id">Using the id 🤔</span>
+          <TooltipV2 target="#using-id" content="Let's Gooooo!" />
         </div>
       </main>
 

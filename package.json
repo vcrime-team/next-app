@@ -3,16 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.29.0",
-    "eslint-config-next": "13.0.6",
-    "next": "13.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.3.0",
+    "next": "12.3.0",
+    "react": "^17.0.2 || ^18.0.0",
+    "react-dom": "^17.0.2 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "@types/react": "^16.0.0",
+    "emotion": "^9.2.12",
+    "next-transpile-modules": "^9.0.0",
+    "react-emotion": "^9.2.12",
+    "unify-icons": "^0.16.0",
+    "unify-react-desktop": "file:../../Desktop/unify-react-desktop-0.22.3-dev.2.tgz",
+    "unify-token": "^2.3.0"
   }
 }
