@@ -6,7 +6,9 @@
     "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tsc": "tsc",
+    "typecheck": "sh typecheck.sh"
   },
   "dependencies": {
     "eslint": "8.13.0",
@@ -23,6 +25,7 @@
     "react-emotion": "^9.2.12",
     "unify-icons": "^0.16.0",
     "unify-react-desktop": "file:../../Desktop/unify-react-desktop-0.22.3-dev.2.tgz",
-    "unify-token": "^2.3.0"
+    "unify-token": "^2.3.0",
+    "typescript": "4.8.2"
   }
 }

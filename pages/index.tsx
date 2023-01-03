@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import TooltipV2 from 'unify-react-desktop/build/TooltipV2'
-import styles from '../styles/Home.module.css'
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import TooltipV2 from 'unify-react-desktop/build/TooltipV2';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
