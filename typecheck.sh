@@ -26,7 +26,7 @@ if [[ -n $TYPE_CHECK ]]; then
   tsc --project ./tsconfig.json
   end=$SECONDS
 	echo "Duration: ${PURPLE}$((end-start))s${NC}\n"
-	exit
+	exit 1
 else
 	end=$SECONDS
 	echo "✅ ${GREEN}NO ERRORS WERE FOUND!${NC}\n"
