@@ -3,7 +3,7 @@ import { Camera } from '@nest-ui/icon';
 import { Meta, Story } from '@storybook/react';
 import { ButtonProps } from './type';
 
-//triger testting 2
+//triger testting 3
 export default {
   title: 'React/Button',
   component: Button,
