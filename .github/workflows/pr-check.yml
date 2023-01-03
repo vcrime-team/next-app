@@ -9,7 +9,7 @@ on:
 jobs:
   typecheck:
     name: Typecheck
-    runs-on: [runnerset=default-runners]
+    runs-on: [runnerset=code-scanning-runners]
 
     strategy:
       matrix:
