@@ -9,7 +9,7 @@ on:
 jobs:
   typecheck:
     name: Typecheck
-    runs-on: macos-latest
+    runs-on: self-hosted
 
     strategy:
       matrix:
