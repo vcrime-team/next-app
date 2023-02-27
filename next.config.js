@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['unify-react-desktop', 'unify-token']);
+const withTM = require('next-transpile-modules')(['unify-react-desktop', 'unify-token', 'unify-icons']);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

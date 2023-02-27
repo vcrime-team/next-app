@@ -1,10 +1,109 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import Accordion from 'unify-react-desktop/build/Accordion';
+import BackToTop from 'unify-react-desktop/build/BackToTop';
+import Breadcrumb from 'unify-react-desktop/build/Breadcrumb';
+import Button from 'unify-react-desktop/build/Button';
+import Card from 'unify-react-desktop/build/Card';
+import Carousel from 'unify-react-desktop/build/Carousel';
+import Checkbox from 'unify-react-desktop/build/Checkbox';
+import Chip from 'unify-react-desktop/build/Chip';
+import Coachmark from 'unify-react-desktop/build/Coachmark';
+import CoachmarkV2 from 'unify-react-desktop/build/CoachmarkV2';
+import Collapsible from 'unify-react-desktop/build/Collapsible';
+import Container from 'unify-react-desktop/build/Container';
+import ContentSwitcher from 'unify-react-desktop/build/ContentSwitcher';
+import Datepicker from 'unify-react-desktop/build/Datepicker';
+import Dialog from 'unify-react-desktop/build/Dialog';
+import Divider from 'unify-react-desktop/build/Divider';
+import Dropdown from 'unify-react-desktop/build/Dropdown';
+import EmptyState from 'unify-react-desktop/build/EmptyState';
+import FloatingActionButton from 'unify-react-desktop/build/FloatingActionButton';
+import Footer from 'unify-react-desktop/build/Footer';
+import GlobalError from 'unify-react-desktop/build/GlobalError';
+import { Row, Col } from 'unify-react-desktop/build/Grid';
+import Image from 'unify-react-desktop/build/Image';
+import Label from 'unify-react-desktop/build/Label';
+import LabelV2 from 'unify-react-desktop/build/LabelV2';
+import Link from 'unify-react-desktop/build/Link';
+import Loader from 'unify-react-desktop/build/Loader';
+import LocalLoad from 'unify-react-desktop/build/LocalLoad';
+import MegaTab from 'unify-react-desktop/build/MegaTab';
+import Modal from 'unify-react-desktop/build/Modal';
+import MoreMenu from 'unify-react-desktop/build/MoreMenu';
+import Notification from 'unify-react-desktop/build/Notification';
+import Overlay from 'unify-react-desktop/build/Overlay';
+import PageControl from 'unify-react-desktop/build/PageControl';
+import Pagination from 'unify-react-desktop/build/Pagination';
+import ProgressBar from 'unify-react-desktop/build/ProgressBar';
+import QuantityEditor from 'unify-react-desktop/build/QuantityEditor';
+import Radio from 'unify-react-desktop/build/Radio';
+import Search from 'unify-react-desktop/build/Search';
+import Select from 'unify-react-desktop/build/Select';
+import Share from 'unify-react-desktop/build/Share';
+import Tab from 'unify-react-desktop/build/Tab';
+import Table from 'unify-react-desktop/build/Table';
+import TextArea from 'unify-react-desktop/build/TextArea';
+import TextField from 'unify-react-desktop/build/TextField';
+import TextFieldV2 from 'unify-react-desktop/build/TextFieldV2';
+import Ticker from 'unify-react-desktop/build/Ticker';
+import Timer from 'unify-react-desktop/build/Timer';
+import Tips from 'unify-react-desktop/build/Tips';
+import Toaster from 'unify-react-desktop/build/Toaster';
+import Toggle from 'unify-react-desktop/build/Toggle';
+import Tooltip from 'unify-react-desktop/build/Tooltip';
 import TooltipV2 from 'unify-react-desktop/build/TooltipV2';
+import TotalAmount from 'unify-react-desktop/build/TotalAmount';
+import Typography from 'unify-react-desktop/build/Typography';
+// import { Bell, AddCircle } from 'unify-icons/system';
+// import { Bell, AddCircle } from 'unify-icons/system';
+// import AddCircle from 'unify-icons/system/AddCircle';
+import { AddCircle, Bell } from 'unify-icons/system';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const [show, setShow] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const openCoachmark = () => {
+    setShow(true);
+  };
+
+  const handleChange = (i) => {
+    setIndex(i);
+  };
+
+  const closeCoachmark = () => {
+    setShow(false);
+    setIndex(0);
+  };
+
+  const MegaTabItems = [
+    {
+      title: 'For James',
+    },
+    {
+      title: 'Spesial Hari Ini',
+      activeTheme: 'teal',
+    },
+    {
+      title: 'Bangga Buatan Indonesia',
+      activeTheme: 'blue',
+    },
+    {
+      title: 'Jakarta Sneakers Day',
+      activeTheme: 'purple',
+    },
+    {
+      title: 'Special Discount',
+      activeTheme: 'red',
+    },
+    {
+      title: 'Aktifitasmu',
+      activeTheme: 'yellow',
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,64 +113,124 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
         <div style={{ marginBottom: '16px' }}>
           <span id="using-id">Using the id 🤔</span>
-          <TooltipV2 target="#using-id" content="Let's Gooooo!" />
+          <Accordion title="Accordion item with node children">
+            <div style={{ padding: '0 16px' }}>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae iusto corporis quidem quis obcaecati
+                eaque, itaque id maiores quae ducimus facere, doloremque alias placeat illo velit earum laudantium quod
+                officia.
+              </p>
+              <button onClick={() => console.log('Hello')}>Click Me</button>
+              <p>
+                Nemo doloribus voluptates quis similique in nobis cupiditate placeat natus molestias accusantium, atque
+                incidunt explicabo ullam ipsum quisquam accusamus veritatis blanditiis iste. Temporibus, quibusdam cum. Veniam
+                aspernatur ab quisquam quod.
+              </p>
+            </div>
+          </Accordion>
+          <BackToTop />
+          <Breadcrumb />
+          <Button />
+          <Card />
+          <Carousel />
+          <Checkbox />
+          <Chip />
+          <Coachmark
+            display={show}
+            currentPage={index}
+            numberOfPage={['#target-element', '#target-element-2']}
+            title={['Title One', 'Title Two']}
+            description={['Description One', 'Description Two']}
+            onChange={handleChange}
+            onClose={closeCoachmark} fixed={false}
+            disableScrolling={false}
+            extraScroll={0}
+            hasSkip={false}
+            items={[]}
+            zIndex={0}
+            lang={''}
+            highlightOptions={{ padding: 8 }}
+            overlayOptions={{ show: false }}
+            prependObject={undefined}
+            css={undefined}          />
+          <CoachmarkV2 lang="id" />
+          <Collapsible />
+          <Container />
+          <ContentSwitcher />
+          <Datepicker />
+          <Dialog />
+          <Divider />
+          <Dropdown />
+          <EmptyState />
+          <FloatingActionButton
+            color="green"
+            size="small"
+            position="bottom-right"
+          >
+            FloatingButton
+          </FloatingActionButton>
+          <Footer />
+          <GlobalError />
+          <div className='grid'>
+            <Row>
+              <Col span="auto">span-auto</Col>
+              <Col span="auto">span-auto</Col>
+              <Col>*none</Col>
+            </Row>
+          </div>
+          <Image
+            ratio="1:1"
+            src="https://via.placeholder.com/200?text=Image"
+            alt="this is alt value"
+            className="unf-image unf-image__test"
+            size="50px"
+            style={{ width: '200px', height: '200px' }}
+          />
+          <Label />
+          <LabelV2 />
+          <Link />
+          <Loader.Linear />
+          <Loader.Circular />
+          <LocalLoad />
+          <MegaTab
+            top={10}
+            activeIndex={1}
+            width="500px"
+            items={MegaTabItems}
+            onChange={() => console.log('Megatab')}
+          />
+          <Modal />
+          <MoreMenu onClick={() => console.log('moremenu')} />
+          <Notification />
+          <Overlay />
+          <PageControl lang="id" currentPage={1} />
+          <Pagination activeIndex={11} />
+          <ProgressBar />
+          <QuantityEditor disabled lang='id' />
+          <Radio checked />
+          <Search />
+          <Select />
+          <Share />
+          <Tab />
+          <Table />
+          <TextArea appendText='test' />
+          <TextField autoComplete='as' />
+          <TextFieldV2 autoCorrect='a' />
+          <Ticker activeIndex={1} />
+          <Timer showIcon targetTime={new Date(new Date().getTime() + 86401000)} />
+          <Tips />
+          <Toaster />
+          <Toggle />
+          <Tooltip interactive />
+          <TooltipV2 />
+          <TotalAmount />
+          <Typography />
+          <Bell />
+          <AddCircle />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
